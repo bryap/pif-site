@@ -2806,6 +2806,45 @@ input, select, textarea {
 		background-color: rgba(255, 255, 255, 0.35);
 	}
 
+/* Container creates two columns: 400px for image, rest for text */
+.scholarship-container {
+    display: grid;
+    grid-template-columns: 400px 1fr;
+    gap: 2em;
+    margin-bottom: 4em;
+    align-items: start;
+}
+
+.scholarship-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;
+    display: block;
+}
+
+.scholarship-text h3 {
+    margin-top: 0;
+    font-size: 1.5em;
+}
+
+/* RESPONSIVE FIX */
+@media screen and (max-width: 980px) {
+    .scholarship-container {
+        /* On smaller screens, switch to one single column */
+        grid-template-columns: 1fr;
+        text-align: center;
+    }
+
+    .scholarship-image img {
+        max-width: 400px;
+        margin: 0 auto 1.5em auto; /* Centers the image */
+    }
+    
+    .scholarship-text {
+        text-align: left; /* Keeps the list and paragraphs easy to read */
+    }
+}
+
 /* Table */
 
 	.table-wrapper {
@@ -4058,3 +4097,43 @@ input, select, textarea {
         height: 80px;
     }
 }
+
+/* 1. The Container: This makes the items sit side-by-side and wrap */
+.statistics.custom-stats {
+    display: flex;
+    flex-wrap: wrap;        /* Allows items to move to the next line if they don't fit */
+    justify-content: center; /* Centers the items horizontally */
+    padding: 0;
+    list-style: none;
+    gap: 0;                 /* Keeps them touching for your "pill" effect */
+}
+
+/* 2. The Items: Make them grow and shrink as needed */
+.statistics.custom-stats li {
+    flex: 1 1 200px;       /* Grow, shrink, and set a "basis" of 200px */
+    min-width: 0;          /* Prevents blowouts */
+    background-color: #ffffff !important;
+    color: #636363 !important;
+    border: 1px solid #efefef;
+    padding: 20px;         /* Added padding so text doesn't hit the edges */
+    text-align: center;
+    box-sizing: border-box; /* Ensures padding doesn't break the width */
+}
+
+/* 3. The Responsive Fix for the Pill Shape */
+@media screen and (max-width: 736px) {
+    .statistics.custom-stats {
+        flex-direction: column; /* Stacks items vertically on mobile */
+    }
+
+    /* Resetting the "Pill" corners for mobile stacking */
+    .statistics.custom-stats li:first-child {
+        border-radius: 8px 8px 0 0; /* Rounds top corners instead of left */
+    }
+
+    .statistics.custom-stats li:last-child {
+        border-radius: 0 0 8px 8px; /* Rounds bottom corners instead of right */
+    }
+}
+
+
