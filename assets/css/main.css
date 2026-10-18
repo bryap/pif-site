@@ -4136,4 +4136,317 @@ input, select, textarea {
     }
 }
 
+/* ==========================================================================
+   Raffle Fundraiser Section Styles
+   ========================================================================== */
+.raffle-feature {
+    margin-top: 3.5em;
+    padding-top: 2.5em;
+    border-top: 1px solid #edd5dc;
+    text-align: left;
+}
+
+.raffle-header {
+    text-align: center;
+    margin-bottom: 2em;
+}
+
+.raffle-badge {
+    display: inline-block;
+    background-color: #e08b9c;
+    color: #ffffff;
+    font-size: 0.8em;
+    font-weight: 700;
+    letter-spacing: 0.08em;
+    text-transform: uppercase;
+    padding: 0.35em 1.2em;
+    border-radius: 20px;
+    margin-bottom: 0.8em;
+}
+
+.raffle-header h3 {
+    font-size: 1.8em;
+    margin: 0 0 0.3em 0;
+    color: #333333;
+    line-height: 1.3;
+}
+
+.raffle-header .raffle-subtitle {
+    font-size: 0.95em;
+    color: #777777;
+    margin: 0;
+}
+
+.raffle-card {
+    display: grid;
+    grid-template-columns: minmax(280px, 1fr) minmax(320px, 1.25fr);
+    gap: 2.5em;
+    align-items: center;
+    background: #ffffff;
+    border: 1px solid #edd5dc;
+    border-radius: 12px;
+    padding: 2.2em;
+    box-shadow: 0 8px 24px rgba(224, 139, 156, 0.08);
+}
+
+.raffle-flyer-col {
+    text-align: center;
+}
+
+.raffle-flyer-link {
+    display: block;
+    border-bottom: none !important;
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 14px rgba(0, 0, 0, 0.12);
+    transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.raffle-flyer-link:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 8px 22px rgba(0, 0, 0, 0.18);
+}
+
+.raffle-flyer-img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.raffle-details-col {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2em;
+    text-align: left;
+}
+
+.raffle-highlight-box {
+    background: #fdf5f7;
+    border-left: 4px solid #e08b9c;
+    padding: 1.2em 1.4em;
+    border-radius: 4px;
+}
+
+.raffle-highlight-box p {
+    margin: 0 0 0.6em 0;
+    color: #444444;
+    font-size: 0.95em;
+    line-height: 1.6;
+}
+
+.raffle-highlight-box p:last-child {
+    margin-bottom: 0;
+}
+
+.raffle-highlight-box strong {
+    color: #222222;
+}
+
+.raffle-cause {
+    color: #555555;
+}
+
+.raffle-cause i {
+    color: #e08b9c;
+    margin-right: 0.4em;
+}
+
+.raffle-pricing h4 {
+    font-size: 0.95em;
+    margin: 0 0 0.8em 0;
+    color: #444444;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+.raffle-tickets {
+    display: flex;
+    gap: 0.8em;
+    flex-wrap: wrap;
+}
+
+.ticket-tier {
+    flex: 1 1 90px;
+    min-width: 85px;
+    background: #ffffff;
+    border: 1px solid #edd5dc;
+    border-radius: 8px;
+    padding: 0.9em 0.5em 0.7em 0.5em;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+    transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.ticket-tier:hover {
+    border-color: #e08b9c;
+    transform: translateY(-2px);
+}
+
+.ticket-tier.popular {
+    border: 2px solid #e08b9c;
+    background: #fffcfd;
+}
+
+.ticket-badge {
+    position: absolute;
+    top: -10px;
+    background: #e08b9c;
+    color: #ffffff;
+    font-size: 0.65em;
+    font-weight: 700;
+    text-transform: uppercase;
+    padding: 0.15em 0.6em;
+    border-radius: 10px;
+    letter-spacing: 0.05em;
+    white-space: nowrap;
+}
+
+.ticket-qty {
+    font-size: 0.85em;
+    color: #666666;
+    font-weight: 600;
+    margin-top: 0.15em;
+}
+
+.ticket-price {
+    font-size: 1.35em;
+    font-weight: 800;
+    color: #222222;
+    margin-top: 0.1em;
+}
+
+.raffle-meta {
+    font-size: 0.9em;
+    color: #555555;
+}
+
+.raffle-meta p {
+    margin: 0 0 0.4em 0;
+}
+
+.raffle-meta i {
+    color: #e08b9c;
+    margin-right: 0.4em;
+}
+
+.raffle-rules {
+    font-size: 0.82em !important;
+    color: #888888 !important;
+    line-height: 1.4 !important;
+    margin-top: 0.5em !important;
+}
+
+.raffle-cta-row {
+    display: flex;
+    align-items: center;
+    gap: 1.5em;
+    flex-wrap: wrap;
+    margin-top: 0.4em;
+}
+
+.raffle-btn-wrap {
+    flex: 1 1 200px;
+}
+
+.raffle-btn {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    gap: 0.6em;
+    text-align: center;
+    font-weight: 700;
+    font-size: 1em !important;
+    height: 3.2em !important;
+    line-height: 3.2em !important;
+    padding: 0 1.5em !important;
+}
+
+.raffle-btn i {
+    font-size: 1.1em;
+}
+
+.raffle-qr-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 0.4em;
+    flex-shrink: 0;
+    text-align: center;
+}
+
+.raffle-qr-wrap a {
+    border-bottom: none !important;
+    display: block;
+    line-height: 0;
+}
+
+.raffle-qr-img {
+    width: 95px;
+    height: 95px;
+    border: 1px solid #e0d0d5;
+    border-radius: 8px;
+    padding: 4px;
+    background: #ffffff;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.raffle-qr-img:hover {
+    transform: scale(1.05);
+    box-shadow: 0 4px 12px rgba(224, 139, 156, 0.2);
+}
+
+.raffle-qr-label {
+    font-size: 0.75em;
+    font-weight: 600;
+    color: #777777;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+}
+
+/* Responsive Scaling for Raffle Card */
+@media screen and (max-width: 980px) {
+    .raffle-card {
+        grid-template-columns: 1fr;
+        gap: 2em;
+        padding: 1.8em;
+    }
+
+    .raffle-flyer-col {
+        max-width: 420px;
+        margin: 0 auto;
+    }
+}
+
+@media screen and (max-width: 736px) {
+    .raffle-card {
+        padding: 1.4em 1em;
+    }
+
+    .raffle-header h3 {
+        font-size: 1.45em;
+    }
+
+    .raffle-cta-row {
+        flex-direction: column-reverse;
+        align-items: stretch;
+        gap: 1.2em;
+    }
+
+    .raffle-qr-wrap {
+        align-self: center;
+        margin-top: 0.2em;
+    }
+
+    .raffle-btn {
+        width: 100%;
+    }
+}
+
+
 
