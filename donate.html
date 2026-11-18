@@ -138,6 +138,26 @@
 										</div>
 
 									</div>
+
+									<!-- Share This Page Card -->
+									<div class="donate-share-card">
+										<div class="donate-share-content">
+											<span class="donate-card-badge">Share</span>
+											<h3 class="donate-share-title">Share This Page</h3>
+											<p class="donate-share-desc">Invite friends, family, or colleagues to support P.I.N.K. Ivy Foundation. Have them scan this QR code with their phone camera to open our Ways to Give page instantly.</p>
+											<div class="donate-share-actions">
+												<button type="button" class="copy-btn" id="copy-page-link-btn" onclick="copyPageLink()">
+													<i class="fas fa-link"></i> <span id="copy-link-label">Copy Page Link</span>
+												</button>
+											</div>
+										</div>
+										<div class="donate-share-qr-col">
+											<div class="share-qr-frame">
+												<img id="share-qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&amp;margin=4&amp;data=https%3A%2F%2Fbryap.github.io%2Fpif-site%2Fdonate.html" alt="QR Code to Share this Donate Page" class="share-qr-img" />
+												<span class="share-qr-label"><i class="fas fa-qrcode"></i> Scan to Share</span>
+											</div>
+										</div>
+									</div>
 								</div>
 
 								<!-- Additional Assistance / Questions -->
@@ -223,6 +243,45 @@
 					btn.classList.add("copied");
 					setTimeout(function() {
 						label.textContent = "Copy";
+						btn.classList.remove("copied");
+					}, 2500);
+				}
+
+				// Dynamically set QR code to current live page URL
+				(function() {
+					var shareUrl = window.location.href;
+					if (window.location.protocol === 'file:') {
+						shareUrl = 'https://bryap.github.io/pif-site/donate.html';
+					}
+					var qrImg = document.getElementById('share-qr-img');
+					if (qrImg) {
+						qrImg.src = 'https://api.qrserver.com/v1/create-qr-code/?size=180x180&margin=4&data=' + encodeURIComponent(shareUrl);
+					}
+				})();
+
+				// Copy Page Link function
+				function copyPageLink() {
+					var url = window.location.protocol === 'file:' ? 'https://bryap.github.io/pif-site/donate.html' : window.location.href;
+					if (navigator.clipboard && window.isSecureContext) {
+						navigator.clipboard.writeText(url).then(function() {
+							showLinkCopiedFeedback();
+						}).catch(function() {
+							fallbackCopyEIN(url);
+							showLinkCopiedFeedback();
+						});
+					} else {
+						fallbackCopyEIN(url);
+						showLinkCopiedFeedback();
+					}
+				}
+
+				function showLinkCopiedFeedback() {
+					var label = document.getElementById("copy-link-label");
+					var btn = document.getElementById("copy-page-link-btn");
+					label.textContent = "Copied!";
+					btn.classList.add("copied");
+					setTimeout(function() {
+						label.textContent = "Copy Page Link";
 						btn.classList.remove("copied");
 					}, 2500);
 				}
