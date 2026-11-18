@@ -4702,9 +4702,9 @@ input, select, textarea {
 }
 
 .copy-btn.copied {
-    background: #2e7d32 !important;
-    border-color: #2e7d32 !important;
-    color: #ffffff !important;
+    background: #d0f4be !important;
+    border-color: #b5e7a0 !important;
+    color: #1b5e20 !important;
 }
 
 .benevity-direct-btn {
