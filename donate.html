@@ -153,7 +153,7 @@
 										</div>
 										<div class="donate-share-qr-col">
 											<div class="share-qr-frame">
-												<img id="share-qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&amp;margin=4&amp;data=https%3A%2F%2Fbryap.github.io%2Fpif-site%2Fdonate.html" alt="QR Code to Share this Donate Page" class="share-qr-img" />
+												<img id="share-qr-img" src="https://api.qrserver.com/v1/create-qr-code/?size=180x180&amp;margin=4&amp;data=https%3A%2F%2Fpinkivyfoundation.org%2Fdonate.html" alt="QR Code to Share this Donate Page" class="share-qr-img" />
 												<span class="share-qr-label"><i class="fas fa-qrcode"></i> Scan to Share</span>
 											</div>
 										</div>
@@ -251,7 +251,7 @@
 				(function() {
 					var shareUrl = window.location.href;
 					if (window.location.protocol === 'file:') {
-						shareUrl = 'https://bryap.github.io/pif-site/donate.html';
+						shareUrl = 'https://pinkivyfoundation.org/donate.html';
 					}
 					var qrImg = document.getElementById('share-qr-img');
 					if (qrImg) {
@@ -261,7 +261,7 @@
 
 				// Copy Page Link function
 				function copyPageLink() {
-					var url = window.location.protocol === 'file:' ? 'https://bryap.github.io/pif-site/donate.html' : window.location.href;
+					var url = window.location.protocol === 'file:' ? 'https://pinkivyfoundation.org/donate.html' : window.location.href;
 					if (navigator.clipboard && window.isSecureContext) {
 						navigator.clipboard.writeText(url).then(function() {
 							showLinkCopiedFeedback();
